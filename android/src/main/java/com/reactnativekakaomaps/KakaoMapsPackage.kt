@@ -15,6 +15,8 @@ class KakaoMapsPackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return emptyList<ViewManager<*, *>>()
+      var kakaoMapManager = KakaoMapManager(reactContext)
+      var managers: List<ViewManager<*, *>> = listOf(kakaoMapManager);
+      return managers;
     }
 }

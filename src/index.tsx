@@ -1,9 +1,34 @@
-import { NativeModules } from 'react-native';
+import React, { Component } from 'react';
+import { requireNativeComponent } from 'react-native';
 
-type KakaoMapsType = {
-  multiply(a: number, b: number): Promise<number>;
+interface KakaoMapViewProps {
+  style?: object;
+  onCenterPointMovedTo?: (nativeEvent: any) => void;
+}
+
+const KakaoMapManager = requireNativeComponent<KakaoMapViewProps>(
+  'KakaoMapView'
+);
+
+class KakaoMapView extends Component<KakaoMapViewProps> {
+  _onCenterPointMovedTo = (event: any) => {
+    if (!this.props.onCenterPointMovedTo) {
+      return;
+    }
+    this.props.onCenterPointMovedTo(event.nativeEvent);
+  };
+  render() {
+    const { _onCenterPointMovedTo } = this;
+    const { style } = this.props;
+    return (
+      <KakaoMapManager
+        style={style}
+        onCenterPointMovedTo={_onCenterPointMovedTo}
+      />
+    );
+  }
+}
+
+export default {
+  KakaoMapView,
 };
-
-const { KakaoMaps } = NativeModules;
-
-export default KakaoMaps as KakaoMapsType;

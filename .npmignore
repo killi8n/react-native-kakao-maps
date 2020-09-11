@@ -1,0 +1,10 @@
+example/
+node_modules/
+
+.gitignore
+.gitattributes
+yarn.lock
+.editorconfig
+.circleci/
+
+src/

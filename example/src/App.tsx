@@ -1,25 +1,33 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import KakaoMaps from 'react-native-kakao-maps';
+import { StyleSheet } from 'react-native';
+import KakaoMapManager from 'react-native-kakao-maps';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  // const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    KakaoMaps.multiply(3, 7).then(setResult);
-  }, []);
+  // React.useEffect(() => {
+  //   K.
+  //   KakaoMaps.multiply(3, 7).then(setResult);
+  // }, []);
 
+  // return (
+  //   <View style={styles.container}>
+  //     <Text>Result: {result}</Text>
+  //   </View>
+  // );
+  const onCenterPointMovedTo = (nativeEvent: any) => {
+    console.log('cdh-debug', nativeEvent.center);
+  };
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <KakaoMapManager.KakaoMapView
+      style={styles.Wrapper}
+      onCenterPointMovedTo={onCenterPointMovedTo}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  Wrapper: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
