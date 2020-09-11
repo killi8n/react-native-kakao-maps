@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <React/RCTComponent.h>
-#import "DaumMap.embeddedframework/DaumMap.framework/Headers/MTMapView.h"
+#import <MTMapView.h>
 
 @interface KakaoMapView : UIView<MTMapViewDelegate>
 @property (nonatomic) MTMapView *mapView;
