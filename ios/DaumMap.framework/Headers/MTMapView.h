@@ -8,11 +8,11 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "MTMapGeometry.h"
-#import "MTMapPOIItem.h"
-#import "MTMapPolyline.h"
-#import "MTMapCircle.h"
-#import "MTMapLocationMarkerItem.h"
+#import <MTMapGeometry.h>
+#import <MTMapPOIItem.h>
+#import <MTMapPolyline.h>
+#import <MTMapCircle.h>
+#import <MTMapLocationMarkerItem.h>
 
 
 @class MTMapViewInternal;

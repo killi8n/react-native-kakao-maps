@@ -7,6 +7,7 @@
 //
 
 #import "KakaoMapManager.h"
+#import "KakaoMapView.h"
 
 @implementation KakaoMapManager
 

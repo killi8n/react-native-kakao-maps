@@ -8,8 +8,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "MTMapGeometry.h"
-#import "MTMapView.h"
+#import <MTMapGeometry.h>
+#import <MTMapView.h>
 
 
 /**

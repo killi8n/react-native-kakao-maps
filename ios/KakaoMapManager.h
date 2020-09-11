@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <React/RCTViewManager.h>
-#import "KakaoMapView.h"
 
 @interface KakaoMapManager : RCTViewManager
 @end
